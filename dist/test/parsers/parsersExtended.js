@@ -17,7 +17,7 @@ export class ParsersExtended {
         }
         const positions = runsArray.flatMap((text, i) => text.text === delimiter ? i : []);
         if (positions.length !== 0) {
-            artist = this.artistParser(runsArray.slice(0, positions[FlexSecondRowOffset.ARTIST]));
+            artist = this.artistParser(runsArray.slice(2, 2 + positions[FlexSecondRowOffset.ARTIST]));
         }
         switch (type) {
             case Category.SONG:
